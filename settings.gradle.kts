@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -21,4 +22,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeBaseProject"
 include(":app")
- 
+
+include(":core:network")
+include(":core:data")
+include(":core:designsystem")
+include(":core:ui")
+include(":core:common")
+
+include(":feature:home")
