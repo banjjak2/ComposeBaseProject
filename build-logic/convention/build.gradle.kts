@@ -1,43 +1,39 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    `kotlin-dsl`
 }
 
-android {
-    namespace = "com.sample.composebaseproject.convention"
-    compileSdk = 35
+group = "com.sample.composebaseproject.buildlogic"
 
-    defaultConfig {
-        minSdk = 29
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_11
     }
 }
 
 dependencies {
+    /**
+     * 안드로이드 관련 빌드를 설정하기 위해
+     * 없을 경우 플러그인 설정 시 CommonExtension이 import되지 않음
+     */
+    compileOnly(libs.android.gradlePlugin)
+    /**
+     * KotlinAndroidProjectExtension 등으로 프로젝트를 세팅하기 위해
+     */
+    compileOnly(libs.kotlin.gradlePlugin)
+}
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+gradlePlugin {
+    plugins {
+        register("androidApplication") {
+            id = libs.plugins.composebaseproject.android.application.get().pluginId
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
+    }
 }
