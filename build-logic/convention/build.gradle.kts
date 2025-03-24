@@ -32,8 +32,12 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = libs.plugins.composebaseproject.android.application.get().pluginId
+            id = libs.plugins.composebaseproject.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("AndroidApplicationComposeConvention") {
+            id = libs.plugins.composebaseproject.android.application.compose.get().pluginId
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
     }
 }

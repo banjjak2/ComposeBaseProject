@@ -56,3 +56,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
 composebaseproject-android-application = { id = "composebaseproject.android.application" }
+composebaseproject-android-application-compose = { id = "composebaseproject.android.application.compose" }
