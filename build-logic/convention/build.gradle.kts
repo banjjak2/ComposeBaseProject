@@ -39,5 +39,9 @@ gradlePlugin {
             id = libs.plugins.composebaseproject.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("AndroidHiltConvention") {
+            id = libs.plugins.composebaseproject.android.hilt.get().pluginId
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
     }
 }

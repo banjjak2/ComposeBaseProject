@@ -1,8 +1,7 @@
 plugins {
     alias(libs.plugins.composebaseproject.android.application)
     alias(libs.plugins.composebaseproject.android.application.compose)
-    alias(libs.plugins.hilt)
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.composebaseproject.android.hilt)
 }
 
 android {
@@ -32,14 +31,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-
     implementation(libs.retrofit)
     implementation(libs.retrofit.serialization.converter)
 
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.hilt.navigation)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

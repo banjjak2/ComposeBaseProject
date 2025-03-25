@@ -57,3 +57,4 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 
 composebaseproject-android-application = { id = "composebaseproject.android.application" }
 composebaseproject-android-application-compose = { id = "composebaseproject.android.application.compose" }
+composebaseproject-android-hilt = { id = "composebaseproject.android.hilt" }
