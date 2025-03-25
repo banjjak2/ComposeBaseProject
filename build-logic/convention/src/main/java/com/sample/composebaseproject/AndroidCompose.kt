@@ -16,11 +16,13 @@ internal fun Project.configureAndroidCompose(
             val bom = libs.findLibrary("androidx-compose-bom").get()
             "implementation"(platform(bom))
             "androidTestImplementation"(platform(bom))
-            "implementation"(libs.findLibrary("androidx-ui").get())
-            "implementation"(libs.findLibrary("androidx-ui-graphics").get())
-            "implementation"(libs.findLibrary("androidx-ui-tooling").get())
-            "implementation"(libs.findLibrary("androidx-ui-tooling-preview").get())
-            "debugImplementation"(libs.findLibrary("androidx-ui-tooling").get())
+
+            "implementation"(libs.findLibrary("androidx-compose-material3").get())
+            "implementation"(libs.findLibrary("androidx-compose-ui").get())
+            "implementation"(libs.findLibrary("androidx-compose-ui-graphics").get())
+            "implementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
+            "implementation"(libs.findLibrary("androidx-compose-ui-tooling-preview").get())
+            "debugImplementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
         }
     }
 }
