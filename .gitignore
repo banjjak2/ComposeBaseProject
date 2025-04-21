@@ -48,3 +48,6 @@ captures/
 
 # Kotlin
 .kotlin
+
+/specs
+.cursor
