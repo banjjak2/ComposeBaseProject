@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    kotlin("plugin.serialization") version "2.1.20"
 }
 
 android {
@@ -43,6 +44,11 @@ android {
 
 dependencies {
 
+    implementation(libs.retrofit2)
+    implementation(libs.kotlinx.serialization)
+    implementation(libs.kotlinx.serialization.converter)
+    implementation(platform(libs.okHttpBom))
+    implementation(libs.okHttp3)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
