@@ -1,4 +1,4 @@
-package com.sample.composebaseproject.designsystem.theme
+package com.sample.composebaseproject.presentation.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
