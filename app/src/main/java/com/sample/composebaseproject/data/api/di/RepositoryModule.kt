@@ -1,6 +1,7 @@
 package com.sample.composebaseproject.data.api.di
 
 import com.sample.composebaseproject.data.api.repository.*
+import com.sample.composebaseproject.domain.repository.DogRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -16,4 +17,10 @@ abstract class RepositoryModule {
     abstract fun bindsSampleRepository(
         sampleRepository: DefaultSampleRepository
     ): SampleRepository
+    
+    @Binds
+    @Singleton
+    abstract fun bindsDogRepository(
+        dogRepository: DefaultDogRepository
+    ): DogRepository
 }

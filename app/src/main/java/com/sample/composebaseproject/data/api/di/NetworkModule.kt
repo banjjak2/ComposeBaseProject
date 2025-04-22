@@ -1,5 +1,6 @@
 package com.sample.composebaseproject.data.api.di
 
+import com.sample.composebaseproject.data.api.DogApi
 import com.sample.composebaseproject.data.api.SampleApi
 import dagger.Module
 import dagger.Provides
@@ -36,9 +37,22 @@ object NetworkModule {
         httpClient: OkHttpClient,
     ): SampleApi = Retrofit.Builder()
         .client(httpClient)
-        .baseUrl("https://petstore.swagger.io/v2")
+        .baseUrl("https://petstore.swagger.io/v2/")
         .addConverterFactory(
             json.asConverterFactory("application/json; charset=UTF8".toMediaType())
         )
         .build().create(SampleApi::class.java)
+        
+    @Provides
+    @Singleton
+    fun providesDogApi(
+        json: Json,
+        httpClient: OkHttpClient,
+    ): DogApi = Retrofit.Builder()
+        .client(httpClient)
+        .baseUrl("https://dog.ceo/api/")
+        .addConverterFactory(
+            json.asConverterFactory("application/json; charset=UTF8".toMediaType())
+        )
+        .build().create(DogApi::class.java)
 }
