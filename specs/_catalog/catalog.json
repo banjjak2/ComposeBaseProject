@@ -1,0 +1,152 @@
+[
+  {
+    "uri": {
+      "specId": "petstore.json",
+      "type": "specification",
+      "identifier": "petstore.json"
+    },
+    "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "operations": [
+      {
+        "path": "/pet/{petId}/uploadImage",
+        "method": "post",
+        "description": "",
+        "operationId": "uploadFile"
+      },
+      {
+        "path": "/pet",
+        "method": "post",
+        "description": "",
+        "operationId": "addPet"
+      },
+      {
+        "path": "/pet",
+        "method": "put",
+        "description": "",
+        "operationId": "updatePet"
+      },
+      {
+        "path": "/pet/findByStatus",
+        "method": "get",
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "findPetsByStatus"
+      },
+      {
+        "path": "/pet/findByTags",
+        "method": "get",
+        "description": "Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+        "operationId": "findPetsByTags"
+      },
+      {
+        "path": "/pet/{petId}",
+        "method": "get",
+        "description": "Returns a single pet",
+        "operationId": "getPetById"
+      },
+      {
+        "path": "/pet/{petId}",
+        "method": "post",
+        "description": "",
+        "operationId": "updatePetWithForm"
+      },
+      {
+        "path": "/pet/{petId}",
+        "method": "delete",
+        "description": "",
+        "operationId": "deletePet"
+      },
+      {
+        "path": "/store/inventory",
+        "method": "get",
+        "description": "Returns a map of status codes to quantities",
+        "operationId": "getInventory"
+      },
+      {
+        "path": "/store/order",
+        "method": "post",
+        "description": "",
+        "operationId": "placeOrder"
+      },
+      {
+        "path": "/store/order/{orderId}",
+        "method": "get",
+        "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+        "operationId": "getOrderById"
+      },
+      {
+        "path": "/store/order/{orderId}",
+        "method": "delete",
+        "description": "For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors",
+        "operationId": "deleteOrder"
+      },
+      {
+        "path": "/user/createWithList",
+        "method": "post",
+        "description": "",
+        "operationId": "createUsersWithListInput"
+      },
+      {
+        "path": "/user/{username}",
+        "method": "get",
+        "description": "",
+        "operationId": "getUserByName"
+      },
+      {
+        "path": "/user/{username}",
+        "method": "put",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "updateUser"
+      },
+      {
+        "path": "/user/{username}",
+        "method": "delete",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "deleteUser"
+      },
+      {
+        "path": "/user/login",
+        "method": "get",
+        "description": "",
+        "operationId": "loginUser"
+      },
+      {
+        "path": "/user/logout",
+        "method": "get",
+        "description": "",
+        "operationId": "logoutUser"
+      },
+      {
+        "path": "/user/createWithArray",
+        "method": "post",
+        "description": "",
+        "operationId": "createUsersWithArrayInput"
+      },
+      {
+        "path": "/user",
+        "method": "post",
+        "description": "This can only be done by the logged in user.",
+        "operationId": "createUser"
+      }
+    ],
+    "schemas": [
+      {
+        "name": "ApiResponse"
+      },
+      {
+        "name": "Category"
+      },
+      {
+        "name": "Pet"
+      },
+      {
+        "name": "Tag"
+      },
+      {
+        "name": "Order"
+      },
+      {
+        "name": "User"
+      }
+    ]
+  }
+]
