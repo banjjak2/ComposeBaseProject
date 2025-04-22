@@ -1,7 +1,6 @@
 package com.sample.composebaseproject.data.api.di
 
-import com.sample.composebaseproject.data.api.repository.DefaultSampleRepository
-import com.sample.composebaseproject.data.api.repository.SampleRepository
+import com.sample.composebaseproject.data.api.repository.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

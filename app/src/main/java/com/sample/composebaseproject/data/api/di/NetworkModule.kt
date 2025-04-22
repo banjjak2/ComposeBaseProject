@@ -36,7 +36,7 @@ object NetworkModule {
         httpClient: OkHttpClient,
     ): SampleApi = Retrofit.Builder()
         .client(httpClient)
-        .baseUrl("")
+        .baseUrl("https://petstore.swagger.io/v2")
         .addConverterFactory(
             json.asConverterFactory("application/json; charset=UTF8".toMediaType())
         )
