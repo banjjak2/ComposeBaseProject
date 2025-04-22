@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## UI 가이드라인
+
+### 요구사항
+- `ViewModel`에서 StateFlow를 Observe할 때 아래 구조를 지켜 주세요.
+```kotlin
+val state by viewModel.uiState.collectAsStateWithLifecycle()
+```
+- `modifier`는 항상 parameter 및 argument의 최상위에 위치하도록 작성해 주세요.
+- UI를 구현했으면 Preview로 볼 수 있도록 해주세요.
+- 최대한 UI를 재사용 가능하도록 구현해 주세요.

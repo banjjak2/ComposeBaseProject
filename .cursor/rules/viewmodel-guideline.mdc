@@ -29,3 +29,6 @@ sealed interface SampleUiState {
 
 ### 요구사항
 - UseCase 또는 메소드에서 Flow 형식을 받았을 경우 `viewModelScope.launch`가 아닌 `launchIn(viewModelScope)`을 사용해서 구현해 주세요.
+- 에러처리는 `Flow`의 `catch`를 사용해 주세요.
+  - 에러 내용은 안드로이드 기본 로그 유틸로 남겨주세요. (android.util.Log)
+  
