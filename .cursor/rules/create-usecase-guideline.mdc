@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## UseCase 구현 가이드라인
+
+### 기본 구조
+```kotlin
+class SampleUseCase @Inject constructor(
+    // inject repository
+    private val sampleRepository: SampleRepository
+) {
+    operator fun invoke(...): Flow<...> = sampleRepository.sampleMethod(...) // include business logic
+}
+```
+
+### 요구사항
+- `app/src/main/java/com/sample/composebaseproject/domain/usecase` 위치에 구현해 주세요.
+- 클래스명은 작성한 로직을 판단하여 적절한 이름으로 작성해 주세요. UseCase로 끝나야 합니다.
+- `Flow`의 기능을 적극적으로 활용해 주세요.

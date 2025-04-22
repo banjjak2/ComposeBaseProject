@@ -66,7 +66,7 @@ data class XXXResponse(
 ### 4. API 작성 요구사항
 - OkHttp와 Retrofit을 사용하고 있습니다.
 - [SampleApi.kt](mdc:app/src/main/java/com/sample/composebaseproject/data/api/SampleApi.kt)에 요청한 API들을 모두 작성해 주세요.
-  - 추가적인 Api 클래스는 필요하지 않습니다.
+  - 단 baseUrl이 다른 경우를 제외하고는 추가적인 Api 클래스는 필요하지 않습니다. baseUrl이 다른 경우 [NetworkModule.kt](mdc:app/src/main/java/com/sample/composebaseproject/data/api/di/NetworkModule.kt)에 새로운 Api를 위한 구현은 가능합니다.
 - API는 아래와 같은 구조를 따라주세요.
   - 반환할 데이터가 없다면 반환값은 설정하지 마세요.
 ```kotlin

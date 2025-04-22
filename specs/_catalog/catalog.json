@@ -1,6 +1,25 @@
 [
   {
     "uri": {
+      "specId": "designing-apis-dogs-1.0.0-resolved.json",
+      "type": "specification",
+      "identifier": "designing-apis-dogs-1.0.0-resolved.json"
+    },
+    "operations": [
+      {
+        "path": "/breed/{breedName}/images",
+        "method": "get",
+        "description": "Get images of dog breeds"
+      }
+    ],
+    "schemas": [
+      {
+        "name": "inline_response_200"
+      }
+    ]
+  },
+  {
+    "uri": {
       "specId": "petstore.json",
       "type": "specification",
       "identifier": "petstore.json"
