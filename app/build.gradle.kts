@@ -50,6 +50,8 @@ dependencies {
     implementation(platform(libs.okHttpBom))
     implementation(libs.okHttp3)
     implementation(libs.hilt.android)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
     ksp(libs.hilt.android.compiler)
 
     implementation(libs.androidx.core.ktx)
